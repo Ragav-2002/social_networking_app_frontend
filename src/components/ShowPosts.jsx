@@ -185,15 +185,15 @@ export default function ShowPosts(props){
                         <CardActions disableSpacing>
                             <IconButton aria-label="like" onClick={()=>{handleLike(post._id)}}>
                             {likes.find(like=>{
-                                return like.targetId==post._id && like.userId==user._id}) ? <Favorite sx={{color: 'red'}}/> : <FavoriteBorder />}
+                                return like.targetId==post._id && like.userId==user._id}) ? <Favorite sx={{color: 'darkviolet'}}/> : <FavoriteBorder />}
                             <Typography>{likes.filter(like=>like.targetId==post._id).length}</Typography>
                             </IconButton>
                             <IconButton aria-label="comment" onClick={()=>{navigate('/show/post', {state:{post: post}})}}>
-                                <CommentIcon />
+                                <CommentIcon  sx={{color: 'royalblue'}}/>
                                 <Typography>{comments?.filter(c=>c.post==post._id).length}</Typography>
                             </IconButton>
                             <IconButton aria-label="share" onClick={()=>{copyToClipboard(post.content)}}>
-                                <ShareIcon />
+                                <ShareIcon sx={{color: 'royalblue'}}/>
                             </IconButton>
                         </CardActions>
                         {post.reports && <Typography marginLeft='5px'><b>report count</b>: {post.reports}</Typography>}

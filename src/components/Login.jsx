@@ -14,7 +14,7 @@ export default function Login(props){
     const [message, setMessage] = useState('')
     const [open, setOpen] = useState(false)
     const [error, setError] = useState(false)
-    const [serverError, setServerError] = useState('')
+    const [serverError, setServerError] = useState({})
     const navigate = useNavigate()
     const initialValues = {
         email: '',
@@ -103,7 +103,7 @@ export default function Login(props){
                     <Typography paddingTop='20px'>Don't have an account?<Button onClick={regiModelOpen}>Register</Button> </Typography>
                 </Box>
                 <Toaster success={open} successMsg={message}/>
-                <Toaster error={error} errorMsg={serverError}/>
+                <Toaster error={error.msg} errorMsg={serverError}/>
             </Paper>
         </Box>
     )
