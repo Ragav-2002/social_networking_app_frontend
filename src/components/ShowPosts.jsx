@@ -82,15 +82,18 @@ export default function ShowPosts(props){
     };
 
     const handleDelete = async(id) => {
+        console.log('hi')
         try{
             const response = await axios.delete(`api/dltPost/${id}`)
             setMessage(response.data.message)
+            console.log(response.data.message)
             setOpen(true)
             setTimeout(()=>{
                 window.location.reload()
             }, 1000)
         }catch(e){
             setErrorMsg(e.code)
+            console.log(e)
             setError(true)
 
         }

@@ -49,7 +49,7 @@ export default function Register(props){
             setTimeout(()=>{
                 handleLogIn()
                 resetForm()
-            },3000)
+            },1000)
         }
         catch(e){
             if(e.code=='ERR_NETWORK'){

@@ -40,7 +40,7 @@ export default function Report(props){
         setSuccess(true)
         setTimeout(()=>{
             onComplete(false)
-        }, 3000)
+        }, 1000)
        }catch(e){
         if(e.code=='ERR_NETWORK'){
             setErrorMsg('network error')

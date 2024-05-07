@@ -7,6 +7,7 @@ import CreatePost from './CreatePost'
 import ShowCommunity from "./ShowCommunity";
 import ShowPost from "./ShowPost";
 import ReportedPosts from "./ReportedPosts";
+import NotFound from "./NotFound";
 
 export default function RouteList(props){
     return (
@@ -18,6 +19,7 @@ export default function RouteList(props){
             <Route path='/show/community' element={<ShowCommunity/>} />
             <Route path='/show/post' element={<ShowPost/>} />
             <Route path='/show/reportedPosts' element={<ReportedPosts/>} />
+            <Route path='*' element={<NotFound/>} />
         </Routes>
     )
 } 

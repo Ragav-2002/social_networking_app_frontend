@@ -48,7 +48,7 @@ export default function Login(props){
                 handleModalClose()
                 resetForm()
                 navigate('/')
-            },1500)
+            },1000)
             setOpen(true)
         }
         catch(e){

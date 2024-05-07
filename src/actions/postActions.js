@@ -15,8 +15,11 @@ export const getPostsFunc = () => {
         }catch(e){
             if(e.code=='ERR_NETWORK'){
                 dispatch(getPostDispatch({serverErrors: {errors: 'network error'}}))
+            }
+            else if(e.response.data){
+                dispatch(getPostDispatch({serverErrors: {errors: e.response.data}}))
             }else{
-                dispatch(getPostDispatch({serverErrors: e.response.data}))
+                dispatch(getPostDispatch({serverErrors: {errors: 'something went wrong'}}))
             }
         }
     }
