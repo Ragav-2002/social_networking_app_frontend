@@ -54,7 +54,7 @@ export default function Report(props){
        }
     }
     return(
-        <Box sx={{width: '500px', margin: '0 auto', marginTop: '150px'}} p={0}>
+        <Box sx={{width: { xs: '70%', md: '400px' }, margin: '0 auto', marginTop: '150px'}} p={0}>
             <Paper sx={{width:'auto', padding: '15px 15px', margin:'0 auto', height:'auto', borderRadius: '5px'}} elevation={5}>
             <Typography>Select Reason</Typography>
             <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>

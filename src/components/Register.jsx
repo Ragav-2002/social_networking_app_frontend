@@ -65,7 +65,13 @@ export default function Register(props){
     }
     return (
         <Box >
-            <Paper sx={{width:'400px', padding: '20px 40px', margin:'0 auto', height:'450px'}} elevation={5}>
+            <Paper sx={{ 
+                width: { xs: '60%', md: '400px' }, 
+                padding: { xs: '20px', sm: '20px 40px' }, 
+                margin: '0 auto', 
+                height: '430px', 
+                overflow: 'hidden'
+            }} elevation={5}>
                 <Typography variant='h6' textAlign='center' paddingBottom="10px">REGISTER</Typography>
                     <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
                         {(props)=>(
