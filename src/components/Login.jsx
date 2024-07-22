@@ -71,7 +71,13 @@ export default function Login(props){
     }
     return (
         <Box >
-            <Paper sx={{width:'400px', padding: '20px 40px', margin:'0 auto', height:'360px'}} elevation={5}>
+            <Paper sx={{ 
+                width: { xs: '60%', md: '400px' }, 
+                padding: { xs: '20px', sm: '20px 40px' }, 
+                margin: '0 auto', 
+                height: '360px', 
+                overflow: 'hidden' // prevent content overflow
+            }} elevation={5}>
                 <Typography variant='h6' textAlign='center' paddingBottom="10px">LOGIN</Typography>
                     <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
                         {(props)=>(
