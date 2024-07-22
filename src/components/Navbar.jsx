@@ -87,7 +87,11 @@ export default function NavBar(props){
                     id="community-search"
                     getOptionLabel={(communities)=>communities.name}
                     options={communities}
-                    sx={{ width: '300px', bgcolor: "white",borderRadius:'4px' }}
+                    sx={{ 
+                        width: { xs: '150px', md: '300px' }, // set different widths for xs and md
+                        bgcolor: "white",
+                        borderRadius: '4px' 
+                    }}
                     size="small"
                     isOptionEqualToValue={(option, value)=>
                         option.name.includes(value)
