@@ -1,4 +1,4 @@
-import { AppBar, Avatar, styled, Toolbar, Typography,  Menu, MenuItem,  Box, Modal, Stack, TextField, } from "@mui/material";
+import { AppBar, Avatar, styled, Toolbar, Typography,  Menu, MenuItem,  Box, Modal, Stack, TextField, Button, } from "@mui/material";
 import StayCurrentPortraitIcon from '@mui/icons-material/StayCurrentPortrait';
 import React, {useState, useEffect} from "react";
 import Autocomplete from '@mui/material/Autocomplete';
@@ -9,7 +9,7 @@ import { logoutFunc } from "../actions/userActions";
 import {addDispatch} from '../actions/authActions'
 import { useNavigate } from "react-router-dom";
 import { blue } from "@mui/material/colors";
-
+import Test from "./test";
 const StyledToolbar = styled(Toolbar)({
     display: 'flex',
     justifyContent: 'space-between'
@@ -77,6 +77,7 @@ export default function NavBar(props){
         <AppBar position="sticky">
             <StyledToolbar>
                 <Stack direction='row' >
+                    <Test/>
                 <StayCurrentPortraitIcon sx={{padding: '2px 3px 0px 0px', marginLeft:'0', marginRight: '0'}} onClick={()=>{navigate('/')}}/>
                 <Typography variant="h6" sx={{display:{xs: 'none', md: 'block'}}}>
                     SNAPP

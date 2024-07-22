@@ -9,8 +9,7 @@ import { getCatFun } from "./actions/categoryAction";
 import {getPostsFunc} from './actions/postActions'
 import { loginFunc } from "./actions/userActions";
 import { useEffect } from "react";
-import { useDispatch, useSelector} from "react-redux";
-import Test from "./components/test";
+import { useDispatch} from "react-redux";
 import { getComments } from "./actions/commentActions";
 import { getLikesFunc } from "./actions/likeActions";
 
@@ -31,7 +30,6 @@ export default function App() {
       <NavBar/>
       <Stack direction='row' spacing={2} >
         <SideBar/>
-        <Test/>
         <RouteList/>
         <RightBar/>
       </Stack>
