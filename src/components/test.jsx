@@ -73,7 +73,7 @@ export default function Test(){
                             <MenuItem onClick={()=>{navigate('/create/post')}}>Create Post</MenuItem>
                         </>
                         :
-                        <MenuItem onClick={()=>{navigate('/create/post')}}>Create Community</MenuItem> }
+                        <MenuItem onClick={()=>{navigate('/create/community')}}>Create Community</MenuItem> }
                         {user.role=='admin' && 
                         <MenuItem onClick={()=>{navigate('/show/reportedPosts')}}>Create Community</MenuItem>}
                         </Menu>

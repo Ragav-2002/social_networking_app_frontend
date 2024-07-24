@@ -76,7 +76,7 @@ export default function Login(props){
                 padding: { xs: '20px', sm: '20px 40px' }, 
                 margin: '0 auto', 
                 height: '360px', 
-                overflow: 'hidden' // prevent content overflow
+                overflow: 'hidden'
             }} elevation={5}>
                 <Typography variant='h6' textAlign='center' paddingBottom="10px">LOGIN</Typography>
                     <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
